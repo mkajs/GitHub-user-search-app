@@ -1,0 +1,62 @@
+@use "../../styles/abstracts/variables" as variables;
+.search {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  width: 100%;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 24px;
+}
+.lightSearch {
+  background-color: variables.$light-inner-bg-color;
+  box-shadow: variables.$shadow-2xl;
+}
+.darkSearch {
+  background-color: variables.$dark-body-bg-color;
+}
+.searchIcon {
+  width: 24px;
+  padding: 4px;
+}
+.searchFrom {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  margin-right: 24px;
+  width: 100%;
+}
+.searchInput {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-family: "iran-sans", sans-serif;
+  direction: rtl;
+}
+.lightInput {
+  background-color: variables.$light-inner-bg-color;
+  color: variables.$light-secondry-heading-color;
+  &::placeholder {
+    color: variables.$light-secondry-text-color;
+  }
+}
+.darkInput {
+  background-color: variables.$dark-body-bg-color;
+  color: variables.$dark-secondry-heading-color;
+  &::placeholder {
+    color: variables.$dark-secondry-text-color;
+  }
+}
+.searchButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background-color: variables.$btn-primary-bg;
+  color: variables.$light-inner-bg-color;
+  font-family: "iran-sans", sans-serif;
+  margin-right: 8px;
+}
