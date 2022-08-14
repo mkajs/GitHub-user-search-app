@@ -1,0 +1,66 @@
+@use "./styles/abstracts/variables" as variables;
+@use "./styles/abstracts/mixins" as mixins;
+
+@font-face {
+  font-family: "iran-sans";
+  src: url("./fonts/IRANSansWeb.ttf");
+}
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    font-family: "iran-sans", sans-serif;
+    font-size: 16px;
+  }
+}
+
+.dark {
+  background-color: variables.$dark-body-bg-color;
+  p {
+    color: variables.$dark-secondry-text-color;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: variables.$dark-secondry-heading-color;
+  }
+}
+
+.light {
+  background-color: variables.$light-body-bg-color;
+  p {
+    color: variables.$light-secondry-text-color;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: variables.$light-secondry-heading-color;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 600px;
+  margin: 0 auto;
+  @include mixins.desktop() {
+    max-width: 900px;
+  }
+}

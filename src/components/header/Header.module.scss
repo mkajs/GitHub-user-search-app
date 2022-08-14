@@ -1,0 +1,23 @@
+@use "../../styles/abstracts/variables" as variables;
+.header {
+  margin-top: 28px;
+  padding: 0 8px;
+  display: flex;
+  flex-direction: row-reverses;
+  align-items: center;
+  width: 100%;
+
+  h1 {
+    font-size: 20px;
+    margin-right: auto;
+  }
+
+  p {
+    margin-right: 40px;
+  }
+
+  img {
+    width: 24px;
+    cursor: pointer;
+  }
+}
