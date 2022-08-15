@@ -13,7 +13,7 @@
   box-shadow: variables.$shadow-2xl;
 }
 .darkSearch {
-  background-color: variables.$dark-body-bg-color;
+  background-color: variables.$dark-inner-bg-color;
 }
 .searchIcon {
   width: 24px;
@@ -41,7 +41,7 @@
   }
 }
 .darkInput {
-  background-color: variables.$dark-body-bg-color;
+  background-color: variables.$dark-inner-bg-color;
   color: variables.$dark-secondry-heading-color;
   &::placeholder {
     color: variables.$dark-secondry-text-color;

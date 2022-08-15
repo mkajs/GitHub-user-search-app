@@ -1,0 +1,139 @@
+@use "../../styles/abstracts/variables" as variables;
+
+@mixin card {
+  margin-top: 48px;
+  width: 100%;
+  border-radius: 10px;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  grid-template-rows: 2fr 1fr 1fr;
+  row-gap: 10px;
+}
+.lightCard {
+  @include card();
+  background-color: variables.$light-inner-bg-color;
+  box-shadow: variables.$shadow-lg;
+}
+.darkCard {
+  @include card();
+  background-color: variables.$dark-inner-bg-color;
+}
+
+@mixin emptyCard {
+  margin-top: 48px;
+  width: 100%;
+  border-radius: 10px;
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "iran-sans", sans-serif;
+  font-size: 16px;
+}
+
+.lightEmptyCard {
+  @include emptyCard();
+  background-color: variables.$light-inner-bg-color;
+  box-shadow: variables.$shadow-lg;
+}
+.darkEmptyCard {
+  @include emptyCard();
+  background-color: variables.$dark-inner-bg-color;
+  color: variables.$dark-secondry-text-color;
+}
+.userIcon {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  width: 100%;
+  border-radius: 100%;
+  padding: 24px;
+}
+.useName {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  h2 {
+    font-size: 24px;
+  }
+
+  a {
+    color: variables.$btn-primary-bg;
+    margin-top: 4px;
+    font-size: 14px;
+    text-decoration: none;
+  }
+
+  P {
+    margin-top: 16px;
+    font-size: 14px;
+    overflow: hidden;
+  }
+}
+
+.userDate {
+  grid-column: 3/4;
+  grid-row: 1/2;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  direction: rtl;
+}
+
+.userStat {
+  grid-column: 2/4;
+  grid-row: 2/3;
+  border-radius: 10px;
+  padding: 24px 48px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  p {
+    margin-top: 16px;
+    font-weight: 600;
+    font-size: 16px;
+  }
+}
+.userStatlight {
+  background-color: variables.$light-body-bg-color;
+
+  span {
+    font-size: 14px;
+    color: variables.$light-secondry-text-color;
+  }
+
+  p {
+    color: variables.$light-secondry-heading-color;
+  }
+}
+.userStatdark {
+  background-color: variables.$dark-body-bg-color;
+  color: variables.$dark-secondry-text-color;
+}
+
+.userLinks {
+  grid-column: 2/4;
+  grid-row: 3/4;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  div {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 8px;
+    width: 50%;
+  }
+}
